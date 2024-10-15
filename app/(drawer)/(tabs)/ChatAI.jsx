@@ -12,7 +12,7 @@ import { GoogleGenerativeAI } from "@google/generative-ai";
 
 const API_KEY = "AIzaSyCtK2msKVUafgCHJrXu-Ne1LD8o3aYFzKo";
 
-const Search = () => {
+const ChatAi = () => {
   const [userInput, setUserInput] = useState("");
   const [messages, setMessages] = useState([]);
   const router = useRouter();
@@ -79,7 +79,7 @@ const Search = () => {
   );
 };
 
-export default Search;
+export default ChatAi;
 
 const styles = StyleSheet.create({
   mainContainer: {
