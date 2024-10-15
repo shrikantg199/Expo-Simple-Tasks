@@ -1,0 +1,1 @@
+tabs,tailwind css,drawer,splash screen with function,search input handle,Onboarding,AI
