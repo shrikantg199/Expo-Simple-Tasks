@@ -35,7 +35,7 @@ const index = () => {
         <TextInput placeholder="Search....." className="px-2" />
       </View>
       <TouchableOpacity onPress={() => router.push("/onboarding")}>
-        <Text>Cart</Text>
+        <Text>onboarding</Text>
       </TouchableOpacity>
     </KeyboardAvoidingView>
   );
