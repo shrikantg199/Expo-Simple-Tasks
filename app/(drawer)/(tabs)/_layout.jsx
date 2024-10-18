@@ -22,9 +22,21 @@ const TabStructure = () => {
         }}
       />
       <Tabs.Screen
-        name="Search"
+        name="ChatAI"
         options={{
-          tabBarLabel: () => null,
+          tabBarLabel: "ChatAI",
+          tabBarActiveTintColor: "#181818",
+          tabBarIcon: () => (
+            <View style={styles.searchIconContainer}>
+              <AntDesign name="shoppingcart" size={28} color="white" />
+            </View>
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="PdfAnalyser"
+        options={{
+          tabBarLabel: "Pdf Analyser",
           tabBarActiveTintColor: "#181818",
           tabBarIcon: () => (
             <View style={styles.searchIconContainer}>
