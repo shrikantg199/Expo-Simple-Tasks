@@ -15,7 +15,7 @@ const API_KEY = "AIzaSyCtK2msKVUafgCHJrXu-Ne1LD8o3aYFzKo";
 // Initialize Gemini AI with your API key
 const genAI = new GoogleGenerativeAI(API_KEY);
 
-const ImageAnalyser = async () => {
+const ImageAnalyser = () => {
   const [image, setImage] = useState(null);
   const [analysis, setAnalysis] = useState("");
   const [loading, setLoading] = useState(false);
@@ -72,7 +72,7 @@ const ImageAnalyser = async () => {
 
   return (
     <View style={styles.container}>
-      <Button title="Pick an image from camera roll" onPress={pickImage} />
+      <Button title="Pick an image " onPress={pickImage} />
 
       {image && (
         <View style={styles.imageContainer}>
@@ -104,7 +104,8 @@ const styles = StyleSheet.create({
     flex: 1,
     padding: 20,
     alignItems: "center",
-    backgroundColor: "#f5f5f5",
+    backgroundColor: "white",
+    height: "100%",
   },
   imageContainer: {
     marginTop: 20,

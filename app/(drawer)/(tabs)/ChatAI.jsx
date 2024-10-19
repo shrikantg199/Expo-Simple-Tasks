@@ -24,7 +24,7 @@ const ChatAi = () => {
       sender: "user",
     };
     setMessages((prevMessages) => [...prevMessages, userMessage]);
-    console.log(userMessage);
+    // console.log(userMessage);
     setUserInput("");
 
     try {
@@ -39,7 +39,7 @@ const ChatAi = () => {
         sender: "ai",
       };
       setMessages((prevMessages) => [...prevMessages, aiMessage]);
-      console.log(aiMessage);
+      // console.log(aiMessage);
     } catch (error) {
       console.error("Error generating AI response:", error);
     }
@@ -84,14 +84,15 @@ export default ChatAi;
 const styles = StyleSheet.create({
   mainContainer: {
     flex: 1,
-    backgroundColor: "#f5f5f5",
+    backgroundColor: "white",
+    height: "100%",
   },
   messageList: {
     padding: 10,
   },
   messageContainer: {
     padding: 10,
-    borderRadius: 8,
+    borderRadius: 12,
     marginVertical: 5,
   },
   userMessage: {
@@ -119,14 +120,14 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: "#ccc",
     padding: 8,
-    borderRadius: 5,
+    borderRadius: 18,
     marginRight: 10,
   },
   button: {
     backgroundColor: "#007bff",
-    paddingVertical: 10,
+    paddingVertical: 12,
     paddingHorizontal: 15,
-    borderRadius: 5,
+    borderRadius: 18,
   },
   buttonText: {
     color: "#fff",

@@ -26,11 +26,13 @@ const TabStructure = () => {
         options={{
           tabBarLabel: "ChatAI",
           tabBarActiveTintColor: "#181818",
-          tabBarIcon: () => (
-            <View style={styles.searchIconContainer}>
-              <AntDesign name="shoppingcart" size={28} color="white" />
-            </View>
-          ),
+        }}
+      />
+      <Tabs.Screen
+        name="ImageAnalyser"
+        options={{
+          tabBarLabel: "Image Analyser",
+          tabBarActiveTintColor: "#181818",
         }}
       />
       <Tabs.Screen
@@ -38,11 +40,6 @@ const TabStructure = () => {
         options={{
           tabBarLabel: "Pdf Analyser",
           tabBarActiveTintColor: "#181818",
-          tabBarIcon: () => (
-            <View style={styles.searchIconContainer}>
-              <AntDesign name="shoppingcart" size={28} color="white" />
-            </View>
-          ),
         }}
       />
     </Tabs>

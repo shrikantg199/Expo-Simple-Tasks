@@ -37,7 +37,7 @@ const Dots = ({ selected }) => {
 const OnboardingSwiper = () => {
   const router = useRouter();
   const handleDone = () => {
-    console.log("Onboarding complete!");
+    // console.log("Onboarding complete!");
     router.push("(tabs)");
   };
 
