@@ -1,21 +1,31 @@
 import {
   KeyboardAvoidingView,
   Platform,
-  SafeAreaView,
   StyleSheet,
   Text,
   TextInput,
   View,
 } from "react-native";
-import React from "react";
+import React, { useCallback, useMemo, useRef } from "react";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { TouchableOpacity } from "react-native";
 import { useNavigation, useRouter } from "expo-router";
 import { DrawerActions } from "@react-navigation/native";
+import BottomSheet from "@gorhom/bottom-sheet";
 
 const index = () => {
   const navigation = useNavigation();
   const router = useRouter();
+  const bottomSheetRef = useRef(null);
+
+  // Snap points for the Bottom Sheet
+  const snapPoints = useMemo(() => ["25%", "50%"], []);
+
+  // Function to handle showing the Bottom Sheet
+  const handlePresentBottomSheet = useCallback(() => {
+    console.log("object")
+    bottomSheetRef.current?.expand();
+  }, []);
   return (
     <KeyboardAvoidingView
       behavior={Platform.OS === "ios" ? "padding" : undefined}
@@ -44,6 +54,14 @@ const index = () => {
       <TouchableOpacity onPress={() => router.push("/onboarding")}>
         <Text>onboarding</Text>
       </TouchableOpacity>
+      <TouchableOpacity onPress={handlePresentBottomSheet}>
+        <Text>Bottomsheet</Text>
+      </TouchableOpacity>
+      <BottomSheet ref={bottomSheetRef} index={-1} snapPoints={snapPoints}>
+        <View className="p-4">
+          <Text>This is a bottom sheet</Text>
+        </View>
+      </BottomSheet>
     </KeyboardAvoidingView>
   );
 };

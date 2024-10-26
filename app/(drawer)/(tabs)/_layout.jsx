@@ -35,13 +35,7 @@ const TabStructure = () => {
           tabBarActiveTintColor: "#181818",
         }}
       />
-      <Tabs.Screen
-        name="PdfAnalyser"
-        options={{
-          tabBarLabel: "Pdf Analyser",
-          tabBarActiveTintColor: "#181818",
-        }}
-      />
+  
     </Tabs>
   );
 };
